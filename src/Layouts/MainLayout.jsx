@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import PageFooter from "../Pages/PageFooter"
 const MainLayout = () => {
     return (
         <div>
@@ -25,6 +26,9 @@ const MainLayout = () => {
                 </nav>
             </section>
             <Outlet></Outlet>
+
+            {/* Footer section  */}
+            <PageFooter></PageFooter>
         </div>
     );
 };

@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import ProductCard from "./ProductCard";
 
 const Products = () => {
     // useLoaderData is a hook of custom react router dom 
@@ -17,8 +18,9 @@ const Products = () => {
         },[])
      */
     return (
-        <div>
-            
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-6 px-3 bg-slate-200">
+            {/* Loop through the products  */}
+            {products?.map(product => <ProductCard key={product.id} product={product}></ProductCard>)}
 
         </div>
     );

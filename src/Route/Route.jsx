@@ -31,6 +31,7 @@ const myCreatedRoute = createBrowserRouter([
           element: <div>What do ypu want to know about me?</div>
         },
         {
+            // We want to create children under dashboard for that we can create dashboard layout 
           path: '/dashboard',
           element: <div>This is your dashboard</div>
         }

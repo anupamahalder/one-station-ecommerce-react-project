@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 const ProductCard = ({product}) => {
     //destructure product object, incase we don't get product at that we can get empty object
-    const {id, title, images, price, stock} = product || {};
+    const {id, title, thumbnail, price, stock} = product || {};
     // console.log(id);
     return (
         <div>
             <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
                 <a href="#">
                     <img className="p-8 rounded-t-lg h-60 mx-auto" 
-                    src={images[0]} alt="product image" />
+                    src={thumbnail} alt="product image" />
                 </a>
                 <div className="px-5 pb-5">
                     <a href="#">

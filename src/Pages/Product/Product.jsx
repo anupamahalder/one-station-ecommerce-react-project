@@ -1,8 +1,26 @@
+import { useEffect, useState } from "react";
+import { useLoaderData, useParams } from "react-router-dom";
+import ProductCard from "../Products/ProductCard";
 
 const Product = () => {
+    // Way-1 
+    // const product = useLoaderData();
+    // console.log(product);
+
+    // Way-2
+    const dataId = useParams()
+    // console.log(dataId);
+    const [product, setProduct] = useState({})
+    useEffect(()=>{
+        fetch(`https://dummyjson.com/products/${dataId.id}`)
+        .then(res => res.json())
+        .then(data => setProduct(data))
+    },[dataId.id])
+
+    
     return (
-        <div>
-            <h1>Product route</h1>
+        <div className="h-screen flex justify-center items-center">
+            <ProductCard key={product.id} product={product}></ProductCard>        
         </div>
     );
 };

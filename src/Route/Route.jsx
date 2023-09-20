@@ -14,7 +14,9 @@ const myCreatedRoute = createBrowserRouter([
         },
         {
           path: '/products',
-          element: <Products></Products>
+          element: <Products></Products>,
+        //   loader will have a function and we can get data from Products.jsx
+          loader: () => fetch(`https://dummyjson.com/products`)
         },
         {
           path: '/contact',

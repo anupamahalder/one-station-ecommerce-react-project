@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+// import { useLoaderData, useParams } from "react-router-dom";
 import ProductCard from "../Products/ProductCard";
+import { useParams } from "react-router-dom";
 
 const Product = () => {
     // Way-1 

@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 const ProductCard = ({product}) => {
     //destructure product object, incase we don't get product at that we can get empty object
-    const {id, title, thumbnail, price, stock} = product || {};
+    const {id, title, thumbnail, price} = product || {};
     // console.log(id);
     return (
         <div>
@@ -46,4 +47,9 @@ const ProductCard = ({product}) => {
     );
 };
 
+
+//Adding proptypes
+ProductCard.propTypes = {
+    product: PropTypes.object.isRequired
+}
 export default ProductCard;

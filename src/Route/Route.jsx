@@ -3,6 +3,10 @@ import MainLayout from "../Layouts/MainLayout";
 import Home from "../Pages/Home/Home";
 import Products from "../Pages/Products/Products";
 import Product from "../Pages/Product/Product";
+import DashboardLayout from "../Layouts/DashboardLayout";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import Profile from "../Pages/Profile/Profile";
+import EditProfile from "../Pages/EditProfile/EditProfile";
 
 const myCreatedRoute = createBrowserRouter([
     {
@@ -33,7 +37,24 @@ const myCreatedRoute = createBrowserRouter([
         {
             // We want to create children under dashboard for that we can create dashboard layout 
           path: '/dashboard',
-          element: <div>This is your dashboard</div>
+        //   We want whatever we do in dashboard will be fixed for that we have to use children
+          element: <DashboardLayout></DashboardLayout>,
+        //   children is outlet 
+          children: [
+            {
+                // first path will be itself dashboard 
+                path: '/dashboard',
+                element: <Dashboard></Dashboard>
+            },
+            {
+                path: '/dashboard/profile',
+                element: <Profile></Profile>
+            },
+            {
+                path: '/dashboard/editprofile',
+                element: <EditProfile></EditProfile>
+            }
+          ]
         }
       ]
     }

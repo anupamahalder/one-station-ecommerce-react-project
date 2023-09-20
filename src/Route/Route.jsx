@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layouts/MainLayout";
 import Home from "../Pages/Home/Home";
 import Products from "../Pages/Products/Products";
+
 const myCreatedRoute = createBrowserRouter([
     {
       path: "/",
@@ -16,7 +17,7 @@ const myCreatedRoute = createBrowserRouter([
           element: <Products></Products>
         },
         {
-          path: '/about',
+          path: '/contact',
           element: <div>What do ypu want to know about me?</div>
         },
         {

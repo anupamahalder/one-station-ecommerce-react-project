@@ -1,4 +1,4 @@
-import { Outlet, useNavigate, Link } from "react-router-dom";
+import { Outlet, useNavigate, NavLink } from "react-router-dom";
 // import { Outlet } from "react-router-dom";
 import PageFooter from "../Pages/PageFooter"
 import SpinnerTime from "../components/SpinnerTime";
@@ -15,18 +15,39 @@ const MainLayout = () => {
                 {/* Navbar design  */}
                 <nav>
                     <ul className="flex gap-5 font-medium">
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/products">Products</Link>
-                        </li>
-                        <li>
-                            <Link to="/contact">Contact</Link>
-                        </li>
-                        <li>
-                            <Link to="/dashboard">Dashboard</Link>
-                        </li>
+                        <NavLink
+                            to="/"
+                            className={({ isActive, isPending }) =>
+                                // We can change style if its is active by writing classname there 
+                                isPending ? "pending" : isActive ? "p-2 bg-blue-300 rounded-md" : ""
+                            }
+                            >
+                            Home
+                        </NavLink>
+                        <NavLink
+                            to="/products"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "p-2 bg-blue-300 rounded-md" : ""
+                            }
+                            >
+                            Products
+                        </NavLink>
+                        <NavLink
+                            to="/contact"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "p-2 bg-blue-300 rounded-md" : ""
+                            }
+                            >
+                            Contact
+                        </NavLink>
+                        <NavLink
+                            to="/dashboard"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "p-2 bg-blue-300 rounded-md" : ""
+                            }
+                            >
+                            Dashboard
+                        </NavLink>
                     </ul>
                 </nav>
             </section>

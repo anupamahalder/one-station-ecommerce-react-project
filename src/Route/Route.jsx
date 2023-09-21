@@ -7,6 +7,7 @@ import DashboardLayout from "../Layouts/DashboardLayout";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import Profile from "../Pages/Profile/Profile";
 import EditProfile from "../Pages/EditProfile/EditProfile";
+import Contact from "../Pages/Contact/Contact";
 
 const myCreatedRoute = createBrowserRouter([
     {
@@ -32,7 +33,7 @@ const myCreatedRoute = createBrowserRouter([
         },
         {
           path: '/contact',
-          element: <div>What do ypu want to know about me?</div>
+          element: <Contact></Contact>
         },
         {
             // We want to create children under dashboard for that we can create dashboard layout 

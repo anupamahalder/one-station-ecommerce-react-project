@@ -19,34 +19,34 @@ const MainLayout = () => {
                             to="/"
                             className={({ isActive, isPending }) =>
                                 // We can change style if its is active by writing classname there 
-                                isPending ? "pending" : isActive ? "p-2 bg-blue-300 rounded-md" : ""
+                                isPending ? "pending" : isActive ? "bg-blue-300 rounded-md" : ""
                             }
                             >
-                            Home
+                            <h1 className="p-2">Home</h1>
                         </NavLink>
                         <NavLink
                             to="/products"
                             className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "p-2 bg-blue-300 rounded-md" : ""
+                                isPending ? "pending" : isActive ? "bg-blue-300 rounded-md" : ""
                             }
                             >
-                            Products
+                            <h1 className="p-2">Products</h1>
                         </NavLink>
                         <NavLink
                             to="/contact"
                             className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "p-2 bg-blue-300 rounded-md" : ""
+                                isPending ? "pending" : isActive ? "bg-blue-300 rounded-md" : ""
                             }
                             >
-                            Contact
+                            <h1 className="p-2">Contact</h1>
                         </NavLink>
                         <NavLink
                             to="/dashboard"
                             className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "p-2 bg-blue-300 rounded-md" : ""
+                                isPending ? "pending" : isActive ? "bg-blue-300 rounded-md" : ""
                             }
                             >
-                            Dashboard
+                            <h1 className="p-2">Dashboard</h1>
                         </NavLink>
                     </ul>
                 </nav>

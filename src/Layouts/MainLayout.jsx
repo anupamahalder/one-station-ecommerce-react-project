@@ -1,4 +1,4 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate, Link } from "react-router-dom";
 // import { Outlet } from "react-router-dom";
 import PageFooter from "../Pages/PageFooter"
 import SpinnerTime from "../components/SpinnerTime";
@@ -16,16 +16,16 @@ const MainLayout = () => {
                 <nav>
                     <ul className="flex gap-5 font-medium">
                         <li>
-                            <a href="/">Home</a>
+                            <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <a href="/products">Products</a>
+                            <Link to="/products">Products</Link>
                         </li>
                         <li>
-                            <a href="/contact">Contact</a>
+                            <Link to="/contact">Contact</Link>
                         </li>
                         <li>
-                            <a href="/dashboard">Dashboard</a>
+                            <Link to="/dashboard">Dashboard</Link>
                         </li>
                     </ul>
                 </nav>

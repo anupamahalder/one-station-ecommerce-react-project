@@ -1,11 +1,11 @@
-// import { Outlet, useNavigation } from "react-router-dom";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
 import PageFooter from "../Pages/PageFooter"
-// import SpinnerTime from "../components/SpinnerTime";
+import SpinnerTime from "../components/SpinnerTime";
 
 const MainLayout = () => {
-    // const navigation = useNavigation()
-    // const isLoadingData = navigation.state === 'loading';
+    const navigation = useNavigate()
+    const isLoadingData = navigation.state === 'loading';
     return (
         <div>
             <section className="flex justify-between px-10 py-7 shadow-md">
@@ -31,15 +31,15 @@ const MainLayout = () => {
                 </nav>
             </section>
             {/* conditional loading of outlet  */}
-            {/* {
+            {
                 isLoadingData ? <SpinnerTime></SpinnerTime> : <div className="min-h-screen">
                     <Outlet></Outlet>
                 </div>
-            } */}
-            <div className="min-h-screen">
+            }
+            {/* <div className="min-h-screen">
                     <Outlet></Outlet>
             </div>
-            
+             */}
             {/* Footer section  */}
             <PageFooter></PageFooter>
         </div>

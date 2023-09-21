@@ -1,7 +1,7 @@
 
 const SpinnerTime = () => {
     return (
-        <div className="h-5">
+        <div className="bg-green-200">
             <h1>Loading...</h1>
         </div>
     );
